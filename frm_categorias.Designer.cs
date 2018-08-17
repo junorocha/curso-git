@@ -32,9 +32,9 @@
             this.btn_novo = new System.Windows.Forms.Button();
             this.txt_categoria = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +49,7 @@
             this.codigoDataGridViewTextBoxColumn,
             this.descricaoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.categoriaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 92);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 93);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(507, 166);
@@ -112,12 +112,9 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Categoria";
             // 
-            // codigoDataGridViewTextBoxColumn
+            // categoriaBindingSource
             // 
-            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
-            this.codigoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.categoriaBindingSource.DataSource = typeof(sistema.DAL.Categoria);
             // 
             // descricaoDataGridViewTextBoxColumn
             // 
@@ -127,9 +124,12 @@
             this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
             this.descricaoDataGridViewTextBoxColumn.Width = 200;
             // 
-            // categoriaBindingSource
+            // codigoDataGridViewTextBoxColumn
             // 
-            this.categoriaBindingSource.DataSource = typeof(sistema.DAL.Categoria);
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            this.codigoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // frm_categorias
             // 

@@ -62,5 +62,15 @@ namespace Sistema {
         private void sairToolStripMenuItem_Click(object sender, EventArgs e) {
             Dispose();
         }
+
+        private void btn_cad_usuario_Click(object sender, EventArgs e) {
+            frm_usuario frm = new frm_usuario();
+            frm.Show();
+        }
+
+        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e) {
+            frm_usuario frm = new frm_usuario();
+            frm.Show();
+        }
     }
 }
