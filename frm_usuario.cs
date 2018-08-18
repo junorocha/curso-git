@@ -16,7 +16,7 @@ namespace Sistema {
         }
 
         private void frm_usuario_Load(object sender, EventArgs e) {
-            tbusuarioBindingSource.DataSource = DataContextFactory.DataContext.tb_usuario;
+            tbusuarioBindingSource.DataSource = DataContextFactory.DataContext.tb_usuario;            
         }
 
         private void btn_novo_Click(object sender, EventArgs e) {
@@ -27,6 +27,7 @@ namespace Sistema {
             if (valida()) {
                 tbusuarioBindingSource.EndEdit();
                 DataContextFactory.DataContext.SubmitChanges();
+                dataGridView1.Refresh();
                 MessageBox.Show("Usuário cadastrado com sucesso!");
             }
         }
@@ -35,6 +36,7 @@ namespace Sistema {
             if (txt_usuario.Text.Trim() == string.Empty || txt_senha.Text.Trim() == string.Empty) {
                 MessageBox.Show("Os campos usuário e senha são obrigatórios!");
                 txt_usuario.Focus();
+                txt_senha.Focus();
                 return false;
             }
             return true;

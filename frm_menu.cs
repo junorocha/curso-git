@@ -72,5 +72,15 @@ namespace Sistema {
             frm_usuario frm = new frm_usuario();
             frm.Show();
         }
+
+        private void btn_cad_clientes_Click(object sender, EventArgs e) {
+            frm_clientes frm = new frm_clientes();
+            frm.Show();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e) {
+            frm_clientes frm = new frm_clientes();
+            frm.Show();
+        }
     }
 }

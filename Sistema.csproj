@@ -109,6 +109,12 @@
     <Compile Include="frm_categorias.Designer.cs">
       <DependentUpon>frm_categorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_clientes.Designer.cs">
+      <DependentUpon>frm_clientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_consultaProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     <EmbeddedResource Include="frm_categorias.resx">
       <DependentUpon>frm_categorias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_clientes.resx">
+      <DependentUpon>frm_clientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_consultaProdutos.resx">
       <DependentUpon>frm_consultaProdutos.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,9 +211,9 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\sistema.DAL.Categoria.datasource" />
+    <None Include="Properties\DataSources\sistema.DAL.Cliente.datasource" />
     <None Include="Properties\DataSources\sistema.DAL.ContasReceber.datasource" />
     <None Include="Properties\DataSources\sistema.DAL.ItensVenda.datasource" />
-    <None Include="Properties\DataSources\sistema.DAL.Pessoas.datasource" />
     <None Include="Properties\DataSources\sistema.DAL.Produto.datasource" />
     <None Include="Properties\DataSources\sistema.DAL.StatusPagamento.datasource" />
     <None Include="Properties\DataSources\sistema.DAL.tb_usuario.datasource" />

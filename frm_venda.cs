@@ -17,12 +17,13 @@ namespace Sistema {
 
         private void frm_venda_Load(object sender, EventArgs e) {
             Size = new Size(548, 79);
-            pessoasBindingSource.DataSource = DataContextFactory.DataContext.Pessoas;
+            clienteBindingSource.DataSource = DataContextFactory.DataContext.Cliente;
             vendaBindingSource.DataSource = DataContextFactory.DataContext.Venda;
             itensVendaBindingSource.DataSource = DataContextFactory.DataContext.ItensVenda;
             produtoBindingSource.DataSource = DataContextFactory.DataContext.Produto;
             statusPagamentoBindingSource.DataSource = DataContextFactory.DataContext.StatusPagamento;
             contasReceberBindingSource.DataSource = DataContextFactory.DataContext.ContasReceber;
+            tbusuarioBindingSource.DataSource = DataContextFactory.DataContext.tb_usuario;
 
             vendaBindingSource.AddNew();
         }
@@ -55,6 +56,7 @@ namespace Sistema {
             itensVendaBindingSource.DataSource = DataContextFactory.DataContext.ItensVenda.Where(x => x.CodigoProduto == this.vendaCorrente.CodigoVenda);
             novoItem();
             CB_cliente.Enabled = false;
+            CB_vendedor.Enabled = false;
         }
 
         private void novoItem() {
@@ -142,8 +144,8 @@ namespace Sistema {
                     btn_finalizarTudo.Enabled = true;
                 }
                 else if (status.CodigoStatus == 2) {
-                    dataVencimentoDateTimePicker.Enabled = true;
                     contaCorrente.CodigoStatus = (int)status.CodigoStatus;
+                    dataVencimentoDateTimePicker.Enabled = true;
                     contaCorrente.DataVencimento = DateTime.Now;
                     contaCorrente.DataPagamento = null;
                     btn_finalizarTudo.Enabled = true;

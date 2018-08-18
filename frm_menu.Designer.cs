@@ -40,6 +40,7 @@
             this.btn_cad_produtos = new System.Windows.Forms.Button();
             this.btn_cad_categorias = new System.Windows.Forms.Button();
             this.btn_cad_usuario = new System.Windows.Forms.Button();
+            this.btn_cad_clientes = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,6 +95,7 @@
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // consultasToolStripMenuItem
             // 
@@ -204,9 +206,29 @@
             this.btn_cad_usuario.Name = "btn_cad_usuario";
             this.btn_cad_usuario.Size = new System.Drawing.Size(84, 58);
             this.btn_cad_usuario.TabIndex = 5;
-            this.btn_cad_usuario.Text = "Cadastrar Usuário";
+            this.btn_cad_usuario.Text = "Cadastrar Usuários";
             this.btn_cad_usuario.UseVisualStyleBackColor = false;
             this.btn_cad_usuario.Click += new System.EventHandler(this.btn_cad_usuario_Click);
+            // 
+            // btn_cad_clientes
+            // 
+            this.btn_cad_clientes.BackColor = System.Drawing.Color.Transparent;
+            this.btn_cad_clientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_cad_clientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cad_clientes.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_cad_clientes.FlatAppearance.BorderSize = 3;
+            this.btn_cad_clientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_cad_clientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_cad_clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cad_clientes.ForeColor = System.Drawing.Color.White;
+            this.btn_cad_clientes.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_cad_clientes.Location = new System.Drawing.Point(374, 41);
+            this.btn_cad_clientes.Name = "btn_cad_clientes";
+            this.btn_cad_clientes.Size = new System.Drawing.Size(84, 58);
+            this.btn_cad_clientes.TabIndex = 6;
+            this.btn_cad_clientes.Text = "Cadastrar Clientes";
+            this.btn_cad_clientes.UseVisualStyleBackColor = false;
+            this.btn_cad_clientes.Click += new System.EventHandler(this.btn_cad_clientes_Click);
             // 
             // frm_menu
             // 
@@ -215,6 +237,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = global::Sistema.Properties.Resources.fundo_sistema_azul;
             this.ClientSize = new System.Drawing.Size(565, 314);
+            this.Controls.Add(this.btn_cad_clientes);
             this.Controls.Add(this.btn_cad_usuario);
             this.Controls.Add(this.btn_cad_categorias);
             this.Controls.Add(this.btn_cad_produtos);
@@ -250,6 +273,7 @@
         private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.Button btn_cad_usuario;
+        private System.Windows.Forms.Button btn_cad_clientes;
     }
 }
 
